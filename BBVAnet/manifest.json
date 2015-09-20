@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "BBVAnet twiks",
+    "description": "Multiple twiks for BBVAnet age in Colombia.",
+    "version": "1.0",
+    "icons": {
+        "128": "logo-128.png",
+        "1000": "logo-1000.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-2.1.4.min.js",
+                "numeral.js/numeral.min.js",
+                "numeral.js/numeral-es.min.js",
+                "bbvanet.separator.js"
+            ],
+            "matches": [
+                "https://www.bbvanet.com.co/*"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        },
+        {
+            "js": [
+                "bbvanet.saldo.js"
+            ],
+            "matches": [
+                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=operaciones_generales_pr&operacion=inicio_op&accion=inicio",
+                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=posicion_global_pr&operacion=posicion_global_op&accion=menuPosicion"
+            ],
+            "run_at": "document_end",
+            "all_frames": true
+        }
+    ]
+}
