@@ -26,8 +26,9 @@
                 "bbvanet.saldo.js"
             ],
             "matches": [
-                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=operaciones_generales_pr&operacion=inicio_op&accion=inicio",
-                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=posicion_global_pr&operacion=posicion_global_op&accion=menuPosicion"
+                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=avance_tarjeta_global_pr&operacion=avance_tarjeta_global_op*",
+                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=operaciones_generales_pr&operacion=inicio_op*",
+                "https://www.bbvanet.com.co/bbvavip/colombiavip/OperacionCBTFServlet?proceso=posicion_global_pr&operacion=posicion_global_op*"
             ],
             "run_at": "document_end",
             "all_frames": true
