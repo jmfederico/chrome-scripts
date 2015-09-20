@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "TeuxDeux",
+    "description": "TeuxDeux",
+    "version": "1.0",
+    "icons": {
+        "128": "logo-128.png",
+        "1024": "logo-1024.png"
+    },
+    "app": {
+        "urls": [
+            "https://teuxdeux.com/"
+        ],
+        "launch": {
+            "web_url": "https://teuxdeux.com/"
+        }
+    }
+}
