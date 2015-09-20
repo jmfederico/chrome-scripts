@@ -6,6 +6,13 @@
     // Set langauge for Numeral library.
     numeral.language('es');
 
+    var $toggle = $('<div id=containerDineroYa-toggle>DineroYa</div>');
+    $toggle.click(function () {
+        $('.containerDineroYa').toggle();
+    });
+    $('.containerDineroYa').before($toggle);
+    $('.containerDineroYa').hide();
+
     $('center table table:eq(5) tr:gt(1):lt(-2)').each(function () {
         var $tr = $(this);
         var $total = $tr.find('td:eq(2) .pesetas');
@@ -14,7 +21,7 @@
         numeral.language('es');
         var saldo = numeral($total.html()).subtract(numeral($disponible.html()));
 
-        $disponible.append(' (' + saldo.format('0,0.00') + ')')
+        $disponible.append(' (' + saldo.format('0,0.00') + ')');
 
     });
 
