@@ -6,14 +6,17 @@
     // Set langauge for Numeral library.
     numeral.language('es');
 
-    var $toggle = $('<div id=containerDineroYa-toggle>DineroYa</div>');
-    $toggle.click(function () {
-        $('.containerDineroYa').toggle();
-    });
-    $('.containerDineroYa').before($toggle);
-    $('.containerDineroYa').hide();
+    var $center = $('center');
 
-    $('center table table:eq(5) tr:gt(1):lt(-2)').each(function () {
+    var first_table = $('center').prev().detach();
+    $center.after(first_table);
+
+    var dinero_ya = $('.containerDineroYa').detach();
+    $center.append(dinero_ya);
+
+    $center.find('>div:eq(0)>br').remove();
+
+    $center.find('table table:eq(5) tr:gt(1):lt(-2)').each(function () {
         var $tr = $(this);
         var $total = $tr.find('td:eq(2) .pesetas');
         var $disponible = $tr.find('td:last .pesetas');
