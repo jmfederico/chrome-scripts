@@ -33,17 +33,6 @@
             ],
             "run_at": "document_end",
             "all_frames": true
-        },
-        {
-            "js": [
-                "bbvanet.coordenadas.js"
-            ],
-            "matches": [
-                "https://www.e-bbva.com.co/DFAUTH/slod_co_web/DFServlet",
-                "https://www.bbvanet.com.co/DFAUTH/slod_co_web/DFServlet"
-            ],
-            "run_at": "document_end",
-            "all_frames": true
         }
     ]
 }
